@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Jobs from "./pages/Jobs";
+import EmployeeSide from "./pages/EmployeeSide";
 
 const App = () => {
   const location = useLocation();
@@ -36,6 +37,8 @@ const App = () => {
 
       {/* Dashboard */}
       <Route path="/dashboard" element={<Dashboard />} />
+      {/* employee side */}
+      <Route path="/employee/*" element={<EmployeeSide/>} />
 
     </Routes>
   );
