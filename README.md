@@ -49,7 +49,8 @@ If encountering error
 > frontend@0.0.0 dev
 > vite
 'vite' is not recognized as an internal or external command,
-operable program or batch file."
+operable program or batch file.
+
 Follow these steps: npm install vite -> npm i/install
 cd frontend
 npm run dev
