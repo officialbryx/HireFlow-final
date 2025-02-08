@@ -1,0 +1,50 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Centers text */
+  }
+  
+  /* Text inside the Hero Section */
+  .hero .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers text horizontally */
+    justify-content: center; /* Centers text vertically */
+    font-size: 2rem; /* Adjust the font size */
+    font-weight: bold; /* Optional: Set the font weight */
+    color: #fff;
+  }
+  
+  .hero .text span {
+    color: #ffffff; /* Optional: Color for the span text */
+    font-size: 1.5rem; /* Optional: Adjust the span text size */
+  }
+
+  .hero .quote {
+    font-size: 1.5rem; /* Adjust the font size */
+    font-weight: bold; /* Optional: Set the font weight */
+    color: #fff;
+  }
+
+  .dashboard-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 20px; /* Add some spacing from the hero section */
+  }
+
+  .dashboard-container .find{
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    padding: 12px 24px; /* Adjust padding */
+    font-size: 1.2rem; /* Increase text size */
+    font-weight: bold; /* Make text bold */
+    border-radius: 8px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
+    display: inline-block; /* Ensure proper padding */
+    cursor: pointer; /* Make it look clickable */
+  }
