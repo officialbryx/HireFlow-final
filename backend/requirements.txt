@@ -4,3 +4,6 @@ flask-mysql
 mysql-connector-python
 requests
 transformers
+torch
+torchvision
+torchaudio
