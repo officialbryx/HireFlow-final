@@ -51,7 +51,9 @@ If encountering error
 'vite' is not recognized as an internal or external command,
 operable program or batch file.
 
-Follow these steps: npm install vite -> npm i/install
+Follow these steps: 
+npm install vite -> npm i/install
+To Start the frontend:
 cd frontend
 npm run dev
 
