@@ -11,8 +11,8 @@ CORS(app)  # Enable CORS
 # Change password as needed
 db = mysql.connector.connect(
     host="localhost",
-    user="admin",
-    password="root",
+    user="root",
+    password="admin",
     database="hireflow"
 )
 cursor = db.cursor()
