@@ -20,8 +20,8 @@ mysql -u root -p
 default password: root
 If you have a different password, change the value of password in app.py
 
-CREATE DATABASE applicant_tracking;
-USE applicant_tracking;
+CREATE DATABASE hireflow;
+USE hireflow;
 
 CREATE TABLE applicants (
     id INT AUTO_INCREMENT PRIMARY KEY,
