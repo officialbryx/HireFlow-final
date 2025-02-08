@@ -45,7 +45,19 @@ source venv/bin/activate  # Activate virtual environment
 python app.py
 
 # 3. Start the Vite Frontend
+If encountering error
+> frontend@0.0.0 dev
+> vite
+'vite' is not recognized as an internal or external command,
+operable program or batch file.
+
+Follow these steps: 
+npm install vite -> npm i/install
+
+To Start the frontend:
+
 cd frontend
+
 npm run dev
 
 Run the LLM (Test) Soon 

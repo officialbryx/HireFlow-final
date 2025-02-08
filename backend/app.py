@@ -8,10 +8,11 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS
 
 # Connect to MySQL Database
+# Change password as needed
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="root",
+    password="admin",
     database="hireflow"
 )
 cursor = db.cursor()
