@@ -136,7 +136,7 @@
 
 .jobs-sidebar {
   width: 30%;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgb(10, 9, 45, 0.8);
   border-radius: 12px;
   padding: 1.5rem;
   overflow-y: auto;
@@ -161,7 +161,7 @@
 
 .jobs-detail-panel {
   width: 70%;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgb(10, 9, 45, 0.8);
   border-radius: 12px;
   padding: 2rem;
   overflow-y: auto;
