@@ -19,7 +19,7 @@ const Login = () => {
   return (
     <div className="app-container">
       <header className="site-header">
-        <h1 className="site-title">HireFlow</h1>
+        <Link to="/" className="site-title">HireFlow</Link>
       </header>
       <div className="login-container">
         <h2 className="form-title">Log in with</h2>

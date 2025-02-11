@@ -10,7 +10,7 @@ const Signup = () => {
   return (
     <div className="app-container">
       <header className="site-header">
-        <h1 className="site-title">HireFlow</h1>
+        <Link to="/" className="site-title">HireFlow</Link>
       </header>
       <div className="signup-container">
         <h2 className="form-title">Create an Account</h2>
@@ -22,12 +22,9 @@ const Signup = () => {
           <button type="submit" className="signup-button">Sign Up</button>
         </form>
         <p className="login-prompt">
-          Already have an account? <Link to="/" className="login-link">Log in</Link>
+          Already have an account? <Link to="/login" className="login-link">Log in</Link>
         </p>
       </div>
-      <footer className="site-footer">
-        <p>HireFlow © 2025</p>
-      </footer>
     </div>
   );
 };
