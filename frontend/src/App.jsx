@@ -37,9 +37,9 @@ const App = () => {
 
       {/* Login Page */}
       <Route path="/login" element={<Login />} />
+      
       {/* employee side */}
       <Route path="/employee/*" element={<EmployeeSide/>} />
-
     </Routes>
   );
 };
