@@ -1,0 +1,249 @@
+.jobs-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.jobs-header {
+  margin-bottom: 2rem;
+}
+
+.jobs-header h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.job-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.job-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.job-card.selected {
+  background: rgba(255, 205, 31, 0.15);
+  border-left: 3px solid #FFCD1F;
+}
+
+.job-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  margin-right: 1rem;
+}
+
+.job-card-title h3 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.job-card-title h4 {
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+.job-description {
+  color: #444;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.job-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.details-btn, .apply-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.details-btn {
+  color: #0A092D;
+  background: transparent;
+  border: 1px solid #0A092D;
+  text-decoration: none;
+}
+
+.details-btn:hover {
+  background: #0A092D;
+  color: #fff;
+}
+
+.apply-btn {
+  background: #FFCD1F;
+  color: #0A092D;
+  border: none;
+}
+
+.apply-btn:hover {
+  background: #ffe37e;
+}
+
+.jobs-layout {
+  display: flex;
+  position: fixed;
+  top: 80px; /* Assuming header height is 80px */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem;
+}
+
+.jobs-sidebar {
+  width: 30%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: 1.5rem;
+  overflow-y: auto;
+  height: 100%;
+  margin-right: 2rem;
+}
+
+.jobs-list {
+  height: calc(100% - 60px); /* Subtract the height of the sidebar header */
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.jobs-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.jobs-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.jobs-detail-panel {
+  width: 70%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.jobs-detail-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.jobs-detail-panel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.job-details {
+  color: #fff;
+}
+
+.job-details-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.company-logo-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  margin-right: 1.5rem;
+}
+
+.job-details-title h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.job-details-title h3 {
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+.job-details-tags {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.job-details-description {
+  margin-bottom: 2rem;
+}
+
+.job-details-description h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.job-details-description p {
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.apply-btn-large {
+  background: #FFCD1F;
+  color: #0A092D;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.apply-btn-large:hover {
+  background: #ffe37e;
+}
+
+.no-selection {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+}
