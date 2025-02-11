@@ -5,7 +5,12 @@
     border-radius: 0.5rem;
     background: #0A092D;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Ensures content is vertically centered */
   }
+
   
   .login-container .form-title {
     text-align: center;

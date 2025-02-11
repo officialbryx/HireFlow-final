@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -11,6 +10,9 @@ const LandingPage = () => {
     <div className="app-container">
       <header className="site-header">
         <h1 className="site-title">HireFlow</h1>
+        <Link to="/login" className="login-button">
+          Login
+        </Link>
       </header>
         <section className="hero">
             <h1 className="text">Find Your Dream Job <span> and get Hired </span></h1>

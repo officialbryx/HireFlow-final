@@ -1,50 +1,108 @@
+.app-container {
+  min-height: 100vh;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  /* Ensure it spans the full width */
+}
+
+.site-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.login-button {
+  text-decoration: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid white;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-left: auto;
+  /* Push the button to the right */
+  margin-right: 2rem;
+  /* Adds space between the button and the right edge */
+}
+
+.login-button:hover {
+  background-color: white;
+  color: #1e3c72;
+}
+
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers content horizontally */
-    justify-content: center; /* Centers content vertically */
-    height: 100vh; /* Full viewport height */
-    text-align: center; /* Centers text */
-  }
-  
-  /* Text inside the Hero Section */
-  .hero .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers text horizontally */
-    justify-content: center; /* Centers text vertically */
-    font-size: 2rem; /* Adjust the font size */
-    font-weight: bold; /* Optional: Set the font weight */
-    color: #fff;
-  }
-  
-  .hero .text span {
-    color: #ffffff; /* Optional: Color for the span text */
-    font-size: 1.5rem; /* Optional: Adjust the span text size */
-  }
+  padding: 6rem 2rem;
+  text-align: center;
+}
 
-  .hero .quote {
-    font-size: 1.5rem; /* Adjust the font size */
-    font-weight: bold; /* Optional: Set the font weight */
-    color: #fff;
-  }
+.text {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-out;
+}
 
-  .dashboard-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin-top: 20px; /* Add some spacing from the hero section */
-  }
+.text span {
+  display: block;
+  font-size: 2.5rem;
+  color: #70a1ff;
+  margin-top: 0.5rem;
+}
 
-  .dashboard-container .find{
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text */
-    padding: 12px 24px; /* Adjust padding */
-    font-size: 1.2rem; /* Increase text size */
-    font-weight: bold; /* Make text bold */
-    border-radius: 8px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
-    display: inline-block; /* Ensure proper padding */
-    cursor: pointer; /* Make it look clickable */
+.quote {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 3rem;
+  animation: slideUp 1s ease-out;
+}
+
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.find {
+  background-color: #70a1ff;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.find:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.job-link {
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

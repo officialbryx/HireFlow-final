@@ -41,4 +41,48 @@ body {
   font-weight: 500;
   color: #fff;
   text-align: center;
+}/* Importing Google Fonts - Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #0A092D;
+  background-image: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  /* Overlay the background image */
+}
+
+#root {
+  width: 100%;
+  padding: 0.6rem;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.site-footer {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
 }
