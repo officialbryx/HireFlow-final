@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
 
 const Jobs = () => {
   useEffect(() => {
@@ -8,11 +9,8 @@ const Jobs = () => {
   return (
     <div className="app-container">
       <header className="site-header">
-        <h1 className="site-title">HireFlow</h1>
+        <Link to="/" className="site-title">HireFlow</Link>
       </header>
-      <footer className="site-footer">
-        <p>HireFlow © 2025</p>
-      </footer>
     </div>
   );
 };
