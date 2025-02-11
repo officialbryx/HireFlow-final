@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const Dashboard = () => {
+const LandingPage = () => {
   useEffect(() => {
-    document.title = "Candidate Dashboard | HireFlow"; // Set page title dynamically
+    document.title = "HireFlow"; // Set page title dynamically
   }, []);
 
   return (
@@ -21,11 +21,8 @@ const Dashboard = () => {
                 <p className="find">Find a Job</p>
             </Link>
         </div>
-      <footer className="site-footer">
-        <p>HireFlow © 2025</p>
-      </footer>
     </div>
   );
 };
 
-export default Dashboard;
+export default LandingPage;

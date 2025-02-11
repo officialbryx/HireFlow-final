@@ -13,7 +13,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();  // Prevent form submission to avoid page reload
-    navigate("/dashboard");  // Programmatically navigate to the dashboard
+    navigate("/");  // Programmatically navigate to the dashboard
   };
 
   return (
@@ -35,9 +35,6 @@ const Login = () => {
           Don&apos;t have an account? <Link to="/signup" className="signup-link">Sign up</Link>
         </p>
       </div>
-      <footer className="site-footer">
-        <p>HireFlow © 2025</p>
-      </footer>
     </div>
   );
 };
