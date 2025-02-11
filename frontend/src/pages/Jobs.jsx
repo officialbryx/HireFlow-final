@@ -36,11 +36,10 @@ const Jobs = () => {
   return (
     <div className="app-container">
       <header className="site-header">
-        <Link to="/" className="site-title">HireFlow</Link>
+      <Link to="/" className="site-title">HireFlow</Link>
       </header>
       <div className="jobs-layout">
         <div className="jobs-sidebar">
-          <h2>Available Positions</h2>
           <div className="jobs-list">
             {jobs.map(job => (
               <JobCard 

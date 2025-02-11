@@ -23,21 +23,22 @@
 }
 
 .job-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  padding: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
   margin-bottom: 1rem;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.2s;
 }
 
 .job-card:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.15);
+  transform: none;
 }
 
 .job-card.selected {
-  background: rgba(255, 205, 31, 0.15);
+  background: rgba(255, 255, 255, 0.2);
   border-left: 3px solid #FFCD1F;
 }
 
@@ -61,7 +62,7 @@
 }
 
 .job-card-title h4 {
-  color: #aaa;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.8rem;
 }
 
@@ -81,10 +82,10 @@
 
 .tag {
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
 }
 
 .job-card-footer {
@@ -127,21 +128,21 @@
 .jobs-layout {
   display: flex;
   position: fixed;
-  top: 80px; /* Assuming header height is 80px */
+  top: 80px;
   left: 0;
   right: 0;
   bottom: 0;
+  background: rgba(10, 9, 45, 0.7);
   padding: 2rem;
 }
 
 .jobs-sidebar {
   width: 30%;
-  background: rgb(10, 9, 45, 0.8);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-right: 1px solid rgba(128, 128, 128, 0.3);
+  background: rgba(255, 255, 255, 0.05);
   overflow-y: auto;
   height: 100%;
-  margin-right: 2rem;
+  padding-right: 1rem;
 }
 
 .jobs-list {
@@ -161,11 +162,10 @@
 
 .jobs-detail-panel {
   width: 70%;
-  background: rgb(10, 9, 45, 0.8);
-  border-radius: 12px;
-  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
   overflow-y: auto;
   height: 100%;
+  padding: 2rem;
 }
 
 .jobs-detail-panel::-webkit-scrollbar {
@@ -178,13 +178,16 @@
 }
 
 .job-details {
+  padding: 2rem;
   color: #fff;
 }
 
 .job-details-header {
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .company-logo-large {
@@ -221,23 +224,22 @@
 
 .job-details-description p {
   line-height: 1.6;
-  color: #ddd;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .apply-btn-large {
-  background: #FFCD1F;
-  color: #0A092D;
+  background: #0a66c2;
+  color: #ffffff;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 24px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
 .apply-btn-large:hover {
-  background: #ffe37e;
+  background: #004182;
 }
 
 .no-selection {
