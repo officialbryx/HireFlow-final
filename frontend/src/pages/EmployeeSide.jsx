@@ -3,9 +3,10 @@ import NavBar from "../components/NavBar";
 import JobPost from "../pages/JobPost";
 import SettingsPage from "../pages/SettingsPage";
 
+
 function EmployeeSide() {
   return (
-    <div>
+    <div className="main-container">
       <NavBar />
       <Routes>
         {/* Default Route - Redirect to Dashboard */}

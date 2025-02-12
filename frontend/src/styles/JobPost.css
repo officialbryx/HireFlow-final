@@ -1,6 +1,7 @@
 /* Fix for navbar overlap */
 .main-container {
-  padding-top: 80px; /* Adjust based on your navbar height */
+  padding-top: 20px; 
+  width: 100%;
 }
 
 .job-posts-container {
