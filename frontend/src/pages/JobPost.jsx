@@ -14,13 +14,38 @@ const JobPosts = () => {
     workField: "",
     typeOfWork: "",
     salary: "",
+    tags: []
   });
   const [successMessage, setSuccessMessage] = useState("");
 
   const handleCreateJob = () => {
+    // Validate required fields
+    const requiredFields = ['jobTitle', 'companyName', 'responsibilities', 'qualifications'];
+    const missingFields = requiredFields.filter(field => !formData[field]);
+    
+    if (missingFields.length > 0) {
+      alert('Please fill in all required fields');
+      return;
+    }
+
     console.log("New Job Post Created:", formData);
     setSuccessMessage("Job post created successfully!");
-    setTimeout(() => setSuccessMessage(""), 3000); // Hide after 3 seconds
+    setTimeout(() => {
+      setSuccessMessage("");
+      setActiveTab("active");
+      // Reset form
+      setFormData({
+        jobTitle: "",
+        companyName: "",
+        responsibilities: "",
+        qualifications: "",
+        location: "",
+        workField: "",
+        typeOfWork: "",
+        salary: "",
+        tags: []
+      });
+    }, 3000);
   };
 
   return (
