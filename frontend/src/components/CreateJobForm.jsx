@@ -1,107 +1,139 @@
-import "../styles/CreateJobForm.css";
+import { useState } from 'react';
+import '../styles/createjobpost.css';
 
 const CreateJobForm = ({ formData, setFormData }) => {
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const [tags, setTags] = useState([]);
+  const [tagInput, setTagInput] = useState('');
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleTagInput = (e) => {
+    if (e.key === 'Enter' && tagInput.trim()) {
+      e.preventDefault();
+      setTags([...tags, tagInput.trim()]);
+      setTagInput('');
+    }
+  };
+
+  const removeTag = (indexToRemove) => {
+    setTags(tags.filter((_, index) => index !== indexToRemove));
   };
 
   return (
     <div className="create-form">
-      <h3>Create a new job post</h3>
-
       <div className="form-group">
-        <label>Job Title</label>
         <input
-          className="custom-input"
           type="text"
           name="jobTitle"
-          placeholder="Enter a job title name, like 'Software Developer'"
+          placeholder="Job Title"
           value={formData.jobTitle}
-          onChange={handleChange}
+          onChange={handleInputChange}
         />
       </div>
 
-      <div className="form-group">
-        <label>Company Name</label>
-        <input
-          className="custom-input"
-          type="text"
-          name="companyName"
-          placeholder="Enter the company name"
-          value={formData.companyName}
-          onChange={handleChange}
-        />
-      </div>
-
-      <div className="form-row">
-        <div className="form-column">
-          <label>Responsibilities</label>
-          <textarea
-            className="custom-input"
-            name="responsibilities"
-            placeholder="Add responsibilities..."
-            value={formData.responsibilities}
-            onChange={handleChange}
+      <div className="form-grid">
+        <div className="form-group">
+          <input
+            type="text"
+            name="companyName"
+            placeholder="Company Name"
+            value={formData.companyName}
+            onChange={handleInputChange}
           />
         </div>
-        <div className="form-column">
-          <label>Qualifications</label>
-          <textarea
-            className="custom-input"
-            name="qualifications"
-            placeholder="Add qualifications..."
-            value={formData.qualifications}
-            onChange={handleChange}
+        <div className="form-group">
+          <input
+            type="text"
+            name="location"
+            placeholder="Location"
+            value={formData.location}
+            onChange={handleInputChange}
           />
         </div>
       </div>
 
-      <div className="form-group">
-        <label>Location</label>
-        <input
-          className="custom-input"
-          type="text"
-          name="location"
-          placeholder="Enter the location..."
-          value={formData.location}
-          onChange={handleChange}
-        />
+      <div className="form-grid">
+        <div className="form-group">
+          <select
+            name="workField"
+            value={formData.workField}
+            onChange={handleInputChange}
+          >
+            <option value="">Select Work Field</option>
+            <option value="technology">Technology</option>
+            <option value="finance">Finance</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="marketing">Marketing</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <select
+            name="typeOfWork"
+            value={formData.typeOfWork}
+            onChange={handleInputChange}
+          >
+            <option value="">Type of Work</option>
+            <option value="fulltime">Full-time</option>
+            <option value="parttime">Part-time</option>
+            <option value="internship">Internship</option>
+          </select>
+        </div>
       </div>
 
       <div className="form-group">
-        <label>Career</label>
         <input
-          className="custom-input"
-          type="text"
-          name="workField"
-          placeholder="Enter the work field..."
-          value={formData.workField}
-          onChange={handleChange}
-        />
-      </div>
-
-      <div className="form-group">
-        <label>Type of Work</label>
-        <input
-          className="custom-input"
-          type="text"
-          name="typeOfWork"
-          placeholder="Enter the type of work..."
-          value={formData.typeOfWork}
-          onChange={handleChange}
-        />
-      </div>
-
-      <div className="form-group">
-        <label>Salary</label>
-        <input
-          className="custom-input"
           type="text"
           name="salary"
-          placeholder="Enter the salary for this job..."
+          placeholder="Salary Range"
           value={formData.salary}
-          onChange={handleChange}
+          onChange={handleInputChange}
         />
+      </div>
+
+      <div className="form-group">
+        <textarea
+          name="responsibilities"
+          placeholder="Job Responsibilities"
+          value={formData.responsibilities}
+          onChange={handleInputChange}
+          rows="4"
+        />
+      </div>
+
+      <div className="form-group">
+        <textarea
+          name="qualifications"
+          placeholder="Required Qualifications"
+          value={formData.qualifications}
+          onChange={handleInputChange}
+          rows="4"
+        />
+      </div>
+
+      <div className="form-group">
+        <div className="tags-input">
+          <input
+            type="text"
+            placeholder="Add tags (press Enter)"
+            value={tagInput}
+            onChange={(e) => setTagInput(e.target.value)}
+            onKeyDown={handleTagInput}
+          />
+          <div className="tags-container">
+            {tags.map((tag, index) => (
+              <span key={index} className="tag">
+                {tag}
+                <button onClick={() => removeTag(index)}>&times;</button>
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

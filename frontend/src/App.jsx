@@ -3,6 +3,7 @@ import "./styles/login.css";
 import "./styles/signup.css"; 
 import "./styles/landingPage.css";
 import "./styles/jobs.css";
+import "./styles/createjobpost.css"
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Login from "./pages/Login";  
@@ -10,6 +11,7 @@ import Signup from "./pages/Signup";
 import LandingPage from "./pages/LandingPage";
 import Jobs from "./pages/Jobs";
 import EmployeeSide from "./pages/EmployeeSide";
+import CreateJobPost from "./pages/CreateJobPost";
 
 const App = () => {
   const location = useLocation();
@@ -24,6 +26,8 @@ const App = () => {
       document.title = "Login | HireFlow";
     } else if (location.pathname === "/jobs") {
       document.title = "Job Post | HireFlow";
+    } else if (location.pathname === "/createjobpost") {
+      document.title = "Create Job Post | HireFlow";
     }
   }, [location]);
 
@@ -41,8 +45,12 @@ const App = () => {
       {/* Job Posting Page */}
       <Route path="/jobs" element={<Jobs />} />
       
-      {/* employee side */}
+      {/* Employee Side Page */}
       <Route path="/employee/*" element={<EmployeeSide/>} />
+
+      {/* Create Job Post Page */}
+      <Route path="/createjobpost/*" element={<CreateJobPost/>} />
+
     </Routes>
   );
 };
