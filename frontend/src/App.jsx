@@ -4,6 +4,7 @@ import "./styles/signup.css";
 import "./styles/landingPage.css";
 import "./styles/jobs.css";
 import "./styles/createjobpost.css"
+import "./styles/NavBar.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Login from "./pages/Login";  

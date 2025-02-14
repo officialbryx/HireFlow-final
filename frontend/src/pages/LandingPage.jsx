@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
+import NavBar from "../components/Navbar";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -8,12 +9,8 @@ const LandingPage = () => {
 
   return (
     <div className="app-container">
-      <header className="site-header">
-        <Link to="/" className="site-title">HireFlow</Link>
-        <Link to="/login" className="login-button">
-          Login
-        </Link>
-      </header>
+      <NavBar />
+      
         <section className="hero">
             <h1 className="text">Find Your Dream Job <span> and get Hired </span></h1>
             <p className="quote">Explore thousands of job listings or find the perfect candidate</p>

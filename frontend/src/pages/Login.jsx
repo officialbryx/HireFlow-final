@@ -19,21 +19,26 @@ const Login = () => {
   return (
     <div className="app-container">
       <header className="site-header">
-        <Link to="/" className="site-title">HireFlow</Link>
+          <Link to="/" className="navbar-logo">
+            <img src="/hireflow-logo.ico" alt="Logo" className="logo-image" />
+          </Link>
       </header>
-      <div className="login-container">
-        <h2 className="form-title">Log in with</h2>
-        <SocialLogin />
-        <p className="separator"><span>or</span></p>
-        <form onSubmit={handleLogin} className="login-form"> {/* Handle form submission */}
-          <InputField type="email" placeholder="Email address" icon="mail" />
-          <InputField type="password" placeholder="Password" icon="lock" />
-          <a href="#" className="forgot-password-link">Forgot password?</a>
-          <button type="submit" className="login-button">Log In</button>
-        </form>
-        <p className="signup-prompt">
-          Don&apos;t have an account? <Link to="/signup" className="signup-link">Sign up</Link>
-        </p>
+      <div className="login-page">
+        <div className="login-container">
+          <h2 className="form-title">Empowering Careers, Connecting Talent</h2>
+          <SocialLogin />
+          <p className="separator"><span>or</span></p>
+          <form onSubmit={handleLogin} className="login-form"> {/* Handle form submission */}
+            <InputField type="email" placeholder="Email address" icon="mail" />
+            <InputField type="password" placeholder="Password" icon="lock" />
+            <a href="#" className="forgot-password-link">Forgot password?</a>
+            <button type="submit" className="login-button">Log In</button>
+          </form>
+          <p className="signup-prompt">
+            Don&apos;t have an account? <Link to="/signup" className="signup-link">Sign up</Link>
+          </p>
+        </div>
+        <img src="/loginvector.jpg" alt="Login illustration" className="login-vector" />
       </div>
     </div>
   );

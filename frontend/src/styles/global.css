@@ -13,12 +13,10 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #0A092D;
-  background-image: url('https://coolbackgrounds.io/images/backgrounds/index/compute-ea4c57a4.png');
+  background: #fff;
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
-  /* Overlay the background image */
 }
 
 #root {
@@ -40,29 +38,24 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding-top: 4rem;
-  /* Add space for the fixed header */
+  padding-top: 5rem; /* Updated padding to account for navbar */
 }
 
-.site-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.site-header {
+.navbar {
   position: fixed;
-  top: 1.5rem;
-  left: 1.5rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   z-index: 1000;
+  padding: 1rem 2rem;
 }
 
-.site-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
