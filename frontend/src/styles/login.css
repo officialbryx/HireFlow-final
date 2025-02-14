@@ -1,3 +1,9 @@
+.app-container {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
 .login-page {
   display: flex;
   width: 100%;
@@ -26,7 +32,7 @@
 }
 
 .site-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -42,7 +48,7 @@
 
 .logo-image {
   height: 100px;
-  width: 100px;
+  width: auto;
 }
 
 .login-container .form-title {
