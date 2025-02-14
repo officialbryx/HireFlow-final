@@ -31,18 +31,18 @@
   left: 0;
   width: 100%;
   padding: 1rem;
-  z-index: 2;
+  z-index: 0;
 }
 
 .navbar-logo {
   display: flex;
   align-items: center;
-  margin-left: 5%;
+  margin-left: 15%;
 }
 
 .logo-image {
-  height: 40px;
-  width: auto;
+  height: 100px;
+  width: 100px;
 }
 
 .login-container .form-title {
